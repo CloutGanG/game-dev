@@ -1,29 +1,25 @@
-                                  newobject02
+
 
 <script>
 
-function myStudent(myAge, myName, myImage){
+function myStudents(myAge, myName, myImage){
 this.myStudentsAge = myAge
-this.myStudentsAge = myName
-this.myStudentsAge = myImage
+this.myStudentsName = myName
+this.myStudentsImage = myImage
 this.myShowinfo = function(){
-   document.getElementById('mydiv1').innerHTML += 'my name is' + this.myStudents + '<br>'
-{;
+   document.getElementById('mydiv1').innerHTML += 'my name is ' + this.myStudentsName + ' and my age is ' +  this.myStudentsAge + ' and my slogan is ' + this.myStudentsImage + '<br>';
+};
 
 }
 
 </script>
-
-<input type=button value="set dylan" onclick="{
-  mydylan = new myStudents(20,'dylan','http')
-}">
-
 <input type= button value="Show dylan" onclick="{
-   mydylan.myShowInfo()
+   mydylan = new myStudents(20,'dylan','shlongle dongle');
+   mydylan.myShowinfo()
 }">
 <input type=button value="Set and Show mary" onclick"{
-  myMary = new myStudent(18, 'Mary','http')
-  myMary.myShowInfo()
+  myMary = new myStudents(18, 'Mary','flickin the dingus');
+  myMary.myShowinfo();
 }">
 
- <div id='myDiv'>...<br/></div>
+ <div id='mydiv1'>...<br/></div>
