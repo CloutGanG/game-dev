@@ -1,19 +1,20 @@
-
-
-     <script>
-
-
-
-function myOb(x){
-
-
-
-    this.myX = x*5;
-   this.myFun = function(){
-  
-    document .getElemenent
-
-
-
-
-
+<html>
+<body>
+<script>
+function bobcat(x){
+	this.pussycat = x * 5;
+	this.puppydog = function(){
+		document.getElementById('main').innerHTML = 'The output is ' + this.pussycat + ', but the number that was chooched was ' + x;
+	}
+}
+</script>
+<br>
+<input type=button value="Maximum Ogredrive" onclick="{
+	chipmunk = new bobcat(4);
+	chipmunk.puppydog();
+}">
+<br>
+<br>
+<div id="main">Output here</div>
+</body>
+</html>
