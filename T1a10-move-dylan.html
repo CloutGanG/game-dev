@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Mr Ellis is not an old man</title>
+</head>
+<body onkeypress="moveCar();">
+<img id="vehicle" src="https://www.famousbirthdays.com/headshots/miley-cyrus-1.jpg" style="position:absolute; left:155px; top:500px; transition: top 0.1s, left 0.1s;" />
+<script>
+function moveCar(){
+	movement = new direction(5);
+	if(event.keyCode==97){
+	movement.left();
+	// a key (left)
+	}
+	if(event.keyCode==119){
+	movement.up();
+	// w key (up)
+	}
+	if(event.keyCode==115){
+	movement.down();
+	//s key (down)
+	}   
+	if(event.keyCode==100){
+	movement.right();
+	//d key (right)
+	}  
+}
+
+function direction(dis){
+	var vel = parseInt(dis);
+	this.left = function(){
+	document.getElementById('vehicle').style.left  = parseInt(document.getElementById('vehicle').style.left) - vel + 'px';
+	};
+	this.right = function(){
+	document.getElementById('vehicle').style.left  = parseInt(document.getElementById('vehicle').style.left) + vel + 'px';
+	};
+	this.up = function(){
+	document.getElementById('vehicle').style.top  = parseInt(document.getElementById('vehicle').style.top) - vel + 'px';
+	};
+	this.down = function(){
+	document.getElementById('vehicle').style.top  = parseInt(document.getElementById('vehicle').style.top) + vel + 'px';
+	};
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
