@@ -1,0 +1,48 @@
+<html>
+<style>
+body {
+	background-image: url('walle.jpg');
+	background-position:10px 200px;
+}
+#main {
+}
+</style>
+<body id="dog">
+<h1 align=center style="background-color: white; color: red; margin: 0 auto; width: 200px;"><u>SUPREME</u></h1>
+<br>
+<div id="main">
+<input type=button id="timeout" value="Timeout" onclick="runTimeout();"></input>
+<br>
+<input type=button id="interval" value="Interval" onclick="runInterval();"></input>
+<br>
+<input type=button id="clear" value="Stop Interval" onclick="stopInterval();"></input>
+<br>
+<input type=button id="bgpos" value="background moveymovey" onclick="runBg();"></input>
+<br>
+<input type=button id="bgstop" value="background stopystopy" onclick="stopBg();"></input>
+<br>
+<div id="output"></div>
+</div>
+<script>
+var dog = setInterval(function(){ document.getElementById('output').innerHTML += 'yeeaaahh boiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii<br>'; }, 300);
+var cat = '';
+function runTimeout(){
+	setTimeout(function(){ document.getElementById('output').innerHTML += 'SUPREME OFF-WHITE BAPE BOIS CLUB ONLY. Vapenation <br>'; }, 500);
+}
+function runInterval(){
+	dog = setInterval(function(){ document.getElementById('output').innerHTML += document.getElementById('textbox').value + '<br>'; }, 300);
+}
+function stopInterval(){
+	clearInterval(dog);
+}
+function runBg(){
+	var x = 1;
+	var y = 1;
+	cat = setInterval(function(){  x += 1; y += 1; document.getElementById('dog').style.backgroundPosition = "" + x + "px " + y + "px"; }, 30);
+}
+function stopBg(){
+	clearInterval(cat);
+}
+</script>
+</body>
+</html>
